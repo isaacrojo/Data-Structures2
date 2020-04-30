@@ -7,6 +7,11 @@ namespace Data_Structures_2
         static void Main(string[] args)
         {
             Stack stack = new Stack();
+            
+            int? poppedElement;
+            poppedElement = stack.Pop();
+            System.Console.WriteLine($"poppedElement => {poppedElement}");
+
             stack.Push(3);
             stack.Push(5);
             stack.Push(7);
@@ -14,8 +19,6 @@ namespace Data_Structures_2
 
             System.Console.WriteLine(stack);
 
-            int poppedElement;
-
             poppedElement = stack.Pop();
             System.Console.WriteLine($"poppedElement => {poppedElement}");
             System.Console.WriteLine(stack);
@@ -24,19 +27,52 @@ namespace Data_Structures_2
             System.Console.WriteLine($"poppedElement => {poppedElement}");
             System.Console.WriteLine(stack);
 
-           //print top
-            int topElement;
-            topElement = stack.Top();
-            System.Console.WriteLine($"topElement = {topElement}");
-            System.Console.WriteLine(stack);
+            //33, 12, 45, 10, 7, 89
 
-            //print bottom
-            int bottomElement;
-            bottomElement = stack.Bottom();
-            System.Console.WriteLine($"bottomElement = {bottomElement}");
-            System.Console.WriteLine(stack);
+            Queue queue = new Queue();
+
+            System.Console.WriteLine(queue);
+
+            //si weno, eso es un int? dudoso puede  tenero NO un valor
+            //debe implementarse con sus debidos if por si hay null
+            
+            // int? currentFront = queue.Front();
+            // if (currentFront is int currentFrontInt)
+            // {
+            //     System.Console.WriteLine("It has a value!");
+            // } else {
+            //     System.Console.WriteLine("No value!");
+            // }
+
+            System.Console.WriteLine($"queue.Front() => {queue.Front()}");
+            System.Console.WriteLine($"queue.Rear() => {queue.Rear()}");
+
+            queue.Enqueue(33);
+
+            System.Console.WriteLine(queue);
+
+            System.Console.WriteLine($"queue.Front() => {queue.Front()}");
+            System.Console.WriteLine($"queue.Rear() => {queue.Rear()}");
+
+            queue.Enqueue(12);
+            queue.Enqueue(45);
+            queue.Enqueue(10);
+            queue.Enqueue(7);
+            queue.Enqueue(89);
+
+            System.Console.WriteLine(queue);
+
+            System.Console.WriteLine($"queue.Front() => {queue.Front()}");
+            System.Console.WriteLine($"queue.Rear() => {queue.Rear()}");
 
 
+            System.Console.WriteLine($"queue.Dequeue() => {queue.Dequeue()}");
+            System.Console.WriteLine($"queue.Dequeue() => {queue.Dequeue()}");
+
+            System.Console.WriteLine(queue);
+
+            System.Console.WriteLine($"queue.Front() => {queue.Front()}");
+            System.Console.WriteLine($"queue.Rear() => {queue.Rear()}");
         }
     }
 }
